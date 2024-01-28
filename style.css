@@ -1,0 +1,162 @@
+body {
+    background: linear-gradient(90deg, rgba(45, 58, 73, 1) 100%, rgba(0, 212, 255, 0.57484243697479) 100%);
+}
+
+.rubik-burned-regular {
+    font-family: "Rubik Burned", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3.5rem;
+    margin: 10px;
+    padding: 4px;
+}
+
+.archivo-black-regular {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 2.4rem;
+    margin: 8px;
+}
+
+.container {
+    background: linear-gradient(90deg, rgba(204, 211, 218, 1) 100%, rgba(0, 212, 255, 0.57484243697479) 100%);
+    border-radius: 25px;
+    padding: 8px;
+    margin: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0.3);
+    height: fit-content;
+    width: auto;
+}
+
+#num {
+    padding: 14px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0.3);
+    outline: none;
+    margin: 0.5rem;
+    width: 430px;
+}
+
+#num:focus {
+    border: 2px solid blue;
+}
+
+#btn {
+    padding: 4px 32px;
+    font-size: 1.2rem;
+    margin: 6px;
+    border-radius: 25px;
+    font-weight: 800;
+    width: 25vw;
+    background-color: blueviolet;
+    color: white;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: blueviolet;
+    opacity: 0.8;
+}
+
+#startbtn {
+    padding: 4px 32px;
+    font-size: 1.2rem;
+    margin: 6px;
+    border-radius: 25px;
+    font-weight: 800;
+    width: 25vw;
+    background-color: rgb(39, 167, 0);
+    color: white;
+    cursor: pointer;
+}
+
+#startbtn:hover {
+    background-color: rgb(39, 167, 0);
+    opacity: 0.8;
+}
+
+#closebtn {
+    padding: 4px 32px;
+    font-size: 1.2rem;
+    margin: 6px;
+    border-radius: 25px;
+    font-weight: 800;
+    width: 25vw;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+
+#closebtn:hover {
+    background-color: rgb(255, 0, 0);
+    opacity: 0.7;
+}
+
+#text {
+    font-family: "Paytone One", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    margin: 4px;
+    padding: 4px;
+}
+
+#trial {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.3rem;
+    margin: 4px;
+    padding: 4px;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+
+    .rubik-burned-regular {
+        font-size: 2rem;
+    }
+
+    .archivo-black-regular {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    #num {
+        padding: 4px;
+        font-size: 1rem;
+        width: 200px;
+    }
+
+    #btn {
+        padding: 2px 4px;
+        font-size: 0.7rem;
+        width: 50%;
+    }
+
+    #startbtn {
+        padding: 2px 4px;
+        font-size: 0.7rem;
+        width: 50%;
+    }
+
+    #closebtn {
+        padding: 2px 4px;
+        font-size: 0.7rem;
+        width: 50%;
+    }
+
+    #text {
+        font-size: 0.8rem;
+        margin: 4px;
+        padding: 4px;
+    }
+
+    #trial {
+        font-size: 0.7rem;
+        margin: 4px;
+        padding: 4px;
+    }
+}

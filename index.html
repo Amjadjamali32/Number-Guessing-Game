@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Number Guessing</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="rubik-burned-regular">Number Guessing Game</h1>
+        <h2 class="archivo-black-regular">Guess the Number</h2>
+        <input type="number" id="num" min="0"><br />
+        <button id="btn">Guess</button><br />
+        <button id="startbtn">Start</button><br />
+        <button id="closebtn" onclick="removeFocus()">Close</button><br />
+        <h3 id="text"></h3>
+        <p id="trial"></p>
+    </div>
+
+    <script>
+
+        let num = document.getElementById('num');
+        let button = document.getElementById('btn');
+        let startbtn = document.getElementById('startbtn');
+        let text = document.getElementById('text');
+        let trialText = document.getElementById('trial');
+        let counter = 0;
+
+        // set focus on the input field
+        startbtn.addEventListener('click', () => {
+            num.focus();
+        })
+
+        // Guessing number function
+        button.addEventListener('click', () => {
+            let guessNum = Math.floor(Math.random() * 10);
+            var audio = new Audio('win.mp3');
+            if (num.value != 0) {
+                if (num.value != guessNum) {
+                    console.log("Try Again1");
+                    counter++;
+                }
+                else {
+                    text.innerHTML = "Congratulations! You Guess the correct Number";
+                    console.log("Congratulations! You Guess correct Number.");
+                    // console.log(`You tries ${counter} Times`);
+                    trialText.innerHTML = `You tries ${counter} times`;
+                    //removeFocus();
+                    audio.play();
+                }
+
+            }
+        })
+
+        //removing focus from input field
+        function removeFocus() {
+            num.blur();
+            counter = 0;
+            num.value = "";
+            trialText.innerHTML = "";
+            text.innerHTML = "";
+        }
+
+    </script>
+</body>
+
+</html>
